@@ -62,13 +62,6 @@ CoreRouter(config)# ip route 0.0.0.0 0.0.0.0 192.168.50.2
 * `0.0.0.0 0.0.0.0` → Represents all unknown IPv4 destinations.
 * `192.168.50.2` → The next-hop IP address of the **ISP router**.
 
-### ✅ Verification Commands
-
-```bash
-CoreRouter# show ip route
-CoreRouter# ping 8.8.8.8
-CoreRouter# traceroute 8.8.8.8
-```
 
 **Expected Results:**
 
@@ -114,12 +107,34 @@ CoreRouter# traceroute 8.8.8.8
 
 📁 **/screenshots/** includes:
 📸 Topology layout
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/36687d7a-d047-4acf-9aeb-6a38aea3f8a2" />
+
 📸 VLAN configurations
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c9b5c44d-a80e-45d8-9908-0cbbbaea0c41" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/638ff9ae-d217-4613-8407-c315807a1fdd" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0e6542da-30a2-4cd2-aa5e-b8c424ec2922" />
+
 📸 IPv4 default route table
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a3960e6a-0c8b-4382-831c-32a76c15f083" />
+
 📸 Successful pings to ISP
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/18066ced-c8ec-419e-a10a-26dc628ab4fa" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/29f929f2-a621-44fc-bc5f-64cd18f39dd6" />
+
 📸 ACL test results
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/79d598c4-69d3-4b01-a7cf-05a0ad3c8a25" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f1258498-85ce-487d-add1-7887c94f7226" />
+
 
 ---
+🧠 Verification Commands
+| Purpose                 | Command                 |
+| ----------------------- | ----------------------- |
+| View IPv4 Routing Table | `show ip route`         |
+| Verify VLANs            | `show vlan brief`       |
+| Check Trunk Links       | `show interfaces trunk` |
+| Test Connectivity       | `ping [destination IP]` |
+
 
 ## 🎥 Demonstration Video
 
@@ -140,7 +155,7 @@ CoreRouter# traceroute 8.8.8.8
 * Configuring a **default route** helped me understand how internal traffic exits the LAN 🌍
 * Misconfigured next-hop IPs caused early connectivity issues ⚠️
 * Verifying default routes with `show ip route` ensured correct ISP linking
-* Learned the importance of **dual-stack routing** (IPv4 + IPv6)
+
 
 ---
 
