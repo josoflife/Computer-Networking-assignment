@@ -10,7 +10,7 @@ It is divided into two main parts focusing on network topology design, configura
 
 ---
 
-## 🛰️ Part I – Network Topologies Design & Simulation (60%)
+## 🛰️ Part I – Network Topologies Design & Simulation
 
 ### 🔹 **Objective**
 Design, configure, and document the following network topologies:
@@ -31,7 +31,7 @@ The hybrid topology integrates **core**, **distribution**, and **access** layers
 - IPv4 & IPv6 addressing implemented on all routers and switches  
 - VLAN segmentation for Staff, IT, and Management networks  
 - HTTP/DNS/DHCP server hosted on Server VLAN  
-- Basic security with passwords, port security, and management VLAN (VLAN 99)  
+- Basic security with passwords, port security,
 - IPv4 Default Route configured for efficient routing  
 
 ---
@@ -45,7 +45,6 @@ The hybrid topology integrates **core**, **distribution**, and **access** layers
 | Security    | 20      | 192.168.20.0/24    | 2001:db8:20::/64     | 192.168.20.1          | 2001:db8:20::1         | Security Dept   |
 | IT          | 30      | 192.168.30.0/24    | 2001:db8:30::/64     | 192.168.30.1          | 2001:db8:30::1         | IT Dept         |
 | Server      | 40      | 192.168.40.0/24    | 2001:db8:40::/64     | 192.168.40.1          | 2001:db8:40::1         | Server VLAN     |
-| Management  | 99      | 192.168.99.0/24    | 2001:db8:99::/64     | 192.168.99.1          | 2001:db8:99::1         | Mgmt VLAN       |
 
 .
 🧠 Verification Commands
@@ -67,14 +66,16 @@ A **default route** allows a router to send packets to a next-hop address when n
 
  
 🧭 **Command used:**
-```bash
 ip route 0.0.0.0 0.0.0.0 192.168.100.2
 
-📝 License
+
+---
+
+ ### 📝 ***License***
 
 
 
 This project was developed for academic submission in CMGP325.
 Reproduction or distribution without permission is not allowed. 🚫
-Router(config)#ip route 0.0.0.0 0.0.0.0 192.168.100.2
+
 
